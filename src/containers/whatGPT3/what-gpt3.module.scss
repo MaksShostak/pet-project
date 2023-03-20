@@ -1,0 +1,124 @@
+.whatgpt3 {
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px;
+  background: var(--color-footer);
+
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  &__feature {
+    display: flex;
+  }
+
+  &__feature .features_container {
+    margin: 0;
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+    }
+  }
+  &__feature .features_container__text {
+    max-width: 700px;
+    @media screen and (max-width: 650px) {
+      margin-top: 8px;
+    }
+  }
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 64px 0 32px;
+
+    @media screen and (max-width: 850px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0px;
+    }
+  }
+  &__heading h1 {
+    font-size: 34px;
+    line-height: 45px;
+    font-weight: 800;
+    font-family: var(--font-family);
+    max-width: 510px;
+
+    @media screen and (max-width: 650px) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  &__heading p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--color-subtext);
+    cursor: pointer;
+
+    @media screen and (max-width: 850px) {
+      margin-top: 16px;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin-top: 32px;
+  }
+  &__container .features_container {
+    flex: 1;
+    margin: 16px;
+    min-width: 210px;
+    display: unset;
+    flex-direction: column;
+    @media screen and (max-width: 350px) {
+      margin: 16px 0;
+      min-width: 100%;
+    }
+  }
+  &__container .features_container__text {
+    margin-top: 8px;
+  }
+}

@@ -3,6 +3,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 32px 96px;
+  @media screen and (max-width: 700px) {
+    padding: 32px 64px;
+  }
+  @media screen and (max-width: 550px) {
+    padding: 32px;
+  }
+
   &__links {
     flex: 1;
     display: flex;
@@ -19,11 +26,17 @@
   &__links_container {
     display: flex;
     flex-direction: row;
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
   }
   &__sign {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @media screen and (max-width: 550px) {
+      display: none;
+    }
   }
   &__sign button,
   &__menu_container button {
@@ -39,8 +52,9 @@
     outline: none;
     cursor: pointer;
   }
-  &__links_container p,
+  &__links_container li,
   &__sign p,
+  &__menu_container li,
   &__menu_container p {
     color: #fff;
     font-family: var(--font-family);
@@ -50,5 +64,45 @@
     text-transform: capitalize;
     margin: 0 16px;
     cursor: pointer;
+  }
+  &__menu {
+    display: none;
+    margin-left: 16px;
+    position: relative;
+    @media screen and (max-width: 1050px) {
+      display: flex;
+    }
+  }
+  &__menu svg {
+    cursor: pointer;
+  }
+  &__menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: start;
+    background: var(--color-footer);
+    padding: 32px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-top: 16px;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgb(0, 0, 0, 0.2);
+    @media screen and (max-width: 550px) {
+      top: 20px;
+    }
+  }
+  &__menu_container li,
+  &__menu_container p {
+    margin: 16px 0;
+  }
+  &__menu_container_links_sign {
+    display: none;
+    @media screen and (max-width: 550px) {
+      display: block;
+    }
   }
 }

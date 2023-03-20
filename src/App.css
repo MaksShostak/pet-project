@@ -11,6 +11,9 @@ a {
   text-decoration: none;
   color: unset;
 }
+li {
+  list-style: none;
+}
 .gradient__bg {
   background: -moz-radial-gradient(
     circle at 3% 25%,
