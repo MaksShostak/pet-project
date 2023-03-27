@@ -1,0 +1,72 @@
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  padding: 32px;
+  margin: 64px;
+  border-radius: 16px;
+  background: var(--gradient-bar);
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    margin: 64px 32px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+    color: #fff;
+  }
+  &__content p {
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+  &__content h3 {
+    font-family: var(--font-family);
+    font-size: 24px;
+    line-height: 45px;
+    font-weight: 800;
+    @media screen and (max-width: 550px) {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 32px;
+    @media screen and (max-width: 650px) {
+      margin: 32px 0 0;
+    }
+  }
+  &__btn button {
+    background: #000;
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 8px 16px;
+    border-radius: 32px;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    min-width: 150px;
+
+    @media screen and (max-width: 550px) {
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+}

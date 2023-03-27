@@ -1,0 +1,124 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--color-footer);
+  &__heading {
+    width: 100%;
+    text-align: center;
+
+    margin-bottom: 48px;
+  }
+  &__heading h2 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 75px;
+    @media screen and (max-width: 850px) {
+      font-size: 44px;
+      line-height: 50px;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 34px;
+      line-height: 42px;
+    }
+    @media screen and (max-width: 400px) {
+      font-size: 27px;
+      line-height: 38px;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px;
+    border: 1px solid #fff;
+    text-align: center;
+
+    margin-bottom: 160px;
+    cursor: pointer;
+  }
+  &__btn p {
+    font-size: 18px;
+    font-family: var(--font-family);
+    line-height: 21px;
+    color: #fff;
+    word-spacing: 2px;
+    @media screen and (max-width: 550px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 100%;
+    text-align: left;
+  }
+  &__links .footer__links_logo,
+  &__links .footer__links_item {
+    width: 250px;
+    margin: 16px;
+    @media screen and (max-width: 550px) {
+      margin: 16px 0;
+    }
+  }
+  &__links_logo {
+    display: flex;
+    flex-direction: column;
+  }
+  &__links_logo img {
+    width: 118px;
+    height: 30px;
+
+    margin-bottom: 16px;
+  }
+  &__links_logo a {
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+  }
+  &__links_item {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  &__links_item h4 {
+    font-size: 14px;
+    line-height: 17px;
+    font-family: var(--font-family);
+    color: #fff;
+
+    margin-bottom: 14.4px;
+  }
+  &__links_item p,
+  &__links_item a {
+    font-size: 12px;
+    line-height: 15px;
+    font-family: var(--font-family);
+    color: #fff;
+    cursor: pointer;
+  }
+  &__links_item li {
+    padding: 8px 0;
+  }
+  &__copyright {
+    margin-top: 32px;
+    text-align: center;
+    width: 100%;
+  }
+  &__copyright p {
+    font-size: 12px;
+    font-family: var(--font-family);
+    line-height: 15px;
+    color: #fff;
+  }
+}

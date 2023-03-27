@@ -14,7 +14,7 @@ const items = [
   {
     id: nanoid(),
     link: 'Open AI',
-    href: '#possibolity',
+    href: '#possibility',
   },
   {
     id: nanoid(),

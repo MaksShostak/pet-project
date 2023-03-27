@@ -8,7 +8,7 @@ import Menu from './menu/Menu';
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
-    <div className={styles.navbar}>
+    <nav className={styles.navbar}>
       <div className={styles.navbar__links}>
         <div className={styles.navbar__links_logo}>
           <img src={logo} alt="logo" />
@@ -53,7 +53,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 

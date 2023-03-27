@@ -1,37 +1,30 @@
 import React from 'react';
 import styles from './what-gpt3.module.scss';
 import Feature from '../../components/feature/Feature';
-
+import whatGpt3FeaturesData from './what-gpt3.FeaturesData';
 const WhatGPT3 = () => {
+  const elements = whatGpt3FeaturesData.map(({ title, text, id }) => (
+    <Feature
+      title={title}
+      text={text}
+      key={id}
+      styleContainer={styles.features_container}
+      textStyle={styles.features_container__text}
+    />
+  ));
+  const elementsA = elements.slice(0, 1);
+  const elementsB = elements.slice(1);
   return (
-    <div className={`${styles.whatgpt3} section__margin`} id="wgpt3">
-      <div className={styles.whatgpt3__feature}>
-        <Feature
-          title="What is GPT-3"
-          text="We so opinion friends me message as delight. Whole front do of plate heard oh ought. His defective nor convinced residence own. Connection has put impossible own apartments boisterous. At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by."
-        />
-      </div>
+    <section className={`${styles.whatgpt3} section__margin`} id="wgpt3">
+      <ul className={styles.whatgpt3__feature}>{elementsA}</ul>
       <div className={styles.whatgpt3__heading}>
-        <h1 className="gradient__text">
+        <h2 className="gradient__text">
           The possibilities are beyond your imagination
-        </h1>
+        </h2>
         <p>Explore the Library</p>
       </div>
-      <div className={styles.whatgpt3__container}>
-        <Feature
-          title="Chatbots"
-          text="We so opinion friends me message as delight. Whole front do of plate heard oh ought."
-        />
-        <Feature
-          title="Knowledgebase"
-          text="At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. As put impossible own apartments b"
-        />
-        <Feature
-          title="Education"
-          text="At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. As put impossible own apartments b"
-        />
-      </div>
-    </div>
+      <ul className={styles.whatgpt3__container}>{elementsB}</ul>
+    </section>
   );
 };
 
